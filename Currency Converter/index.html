@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Currency Converter</h1>
+    <p class="subtitle">Live exchange rates</p>
+
+    <!-- Amount input -->
+    <div class="group">
+      <label>Amount</label>
+      <input type="number" id="amount" value="1" min="1">
+    </div>
+
+    <!-- From currency -->
+    <div class="group">
+      <label>From</label>
+      <select id="from">
+        <option value="JPY">JPY — Japanese Yen</option>
+        <option value="USD">USD — US Dollar</option>
+        <option value="EUR">EUR — Euro</option>
+        <option value="NPR">NPR — Nepali Rupee</option>
+        <option value="GBP">GBP — British Pound</option>
+        <option value="AUD">AUD — Australian Dollar</option>
+        <option value="CNY">CNY — Chinese Yuan</option>
+        <option value="KRW">KRW — Korean Won</option>
+      </select>
+    </div>
+
+    <!-- To currency -->
+    <div class="group">
+      <label>To</label>
+      <select id="to">
+        <option value="USD">USD — US Dollar</option>
+        <option value="JPY">JPY — Japanese Yen</option>
+        <option value="EUR">EUR — Euro</option>
+        <option value="NPR">NPR — Nepali Rupee</option>
+        <option value="GBP">GBP — British Pound</option>
+        <option value="AUD">AUD — Australian Dollar</option>
+        <option value="CNY">CNY — Chinese Yuan</option>
+        <option value="KRW">KRW — Korean Won</option>
+      </select>
+    </div>
+
+    <!-- Button -->
+    <button onclick="convert()">Convert</button>
+
+    <!-- Result -->
+    <div class="result" id="result">
+      Enter an amount and click Convert
+    </div>
+
+    <!-- Error -->
+    <p class="error" id="error"></p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
