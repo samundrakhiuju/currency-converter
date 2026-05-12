@@ -7,6 +7,10 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #060a10;
+  background-image:
+    linear-gradient(rgba(0, 200, 240, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 240, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
   color: #f0f6ff;
   display: flex;
   justify-content: center;
@@ -17,17 +21,22 @@ body {
 .container {
   background: #0d1825;
   border: 1px solid rgba(0, 200, 240, 0.2);
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 2.5rem;
   width: 100%;
   max-width: 420px;
   text-align: center;
+  box-shadow: 0 0 40px rgba(0, 200, 240, 0.05);
 }
 
 h1 {
   font-size: 1.8rem;
-  color: #00c8f0;
+  color: #f0f6ff;
   margin-bottom: 6px;
+}
+
+h1 span {
+  color: #00c8f0;
 }
 
 .subtitle {
@@ -43,10 +52,10 @@ h1 {
 
 label {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   color: #6a95b0;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin-bottom: 6px;
 }
 
@@ -55,10 +64,11 @@ select {
   width: 100%;
   padding: 10px 14px;
   background: #060a10;
-  border: 1px solid rgba(0, 200, 240, 0.3);
-  border-radius: 8px;
+  border: 1px solid rgba(0, 200, 240, 0.2);
+  border-radius: 10px;
   color: #f0f6ff;
   font-size: 15px;
+  transition: border-color 0.2s;
 }
 
 input:focus,
@@ -71,26 +81,32 @@ button {
   width: 100%;
   padding: 12px;
   margin-top: 0.5rem;
-  background: #00c8f0;
+  background: linear-gradient(135deg, #00c8f0, #0090b0);
   color: #060a10;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: opacity 0.2s, transform 0.1s;
+  letter-spacing: 0.5px;
 }
 
 button:hover {
-  background: #38d9f5;
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 .result {
   margin-top: 1.5rem;
-  padding: 1.2rem;
-  background: #060a10;
-  border: 1px solid rgba(0, 200, 240, 0.2);
-  border-radius: 10px;
+  padding: 1.4rem;
+  background: linear-gradient(135deg, #0a1f30, #0d2535);
+  border: 1px solid rgba(0, 200, 240, 0.15);
+  border-radius: 12px;
   font-size: 1rem;
   color: #6a95b0;
   line-height: 1.8;
@@ -98,14 +114,28 @@ button:hover {
 
 .result span {
   display: block;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #00c8f0;
   margin-top: 6px;
+  letter-spacing: -0.5px;
+}
+
+.result small {
+  display: block;
+  font-size: 11px;
+  color: #4a7090;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
 }
 
 .error {
   color: #ff6b6b;
   font-size: 13px;
   margin-top: 10px;
+}
+
+/* Flag emoji next to title */
+.title-row {
+  margin-bottom: 0.3rem;
 }
